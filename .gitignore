@@ -1,0 +1,48 @@
+# Pastas geradas pela build
+bin/                 
+obj/                
+
+# Pacotes NuGet
+*.nupkg             
+packages/           
+*.nuget.props       
+*.nuget.targets     
+
+# Arquivos de debug
+*.pdb               
+
+# Arquivos temporários do sistema
+*.tmp               
+*.log               
+*.vspscc            
+*.vssscc
+
+# VS Code
+.vscode/            
+
+# JetBrains Rider / Resharper
+.idea/              
+_ReSharper*/        
+*.DotSettings.user  
+
+# Configurações pessoais do usuário
+*.user              
+*.suo               
+*.sln.docstates     
+
+# Arquivos de backup
+*~                  
+*.bak               
+*.old               
+
+# Testes e cobertura
+TestResults/        
+coverage/           
+*.coverage          
+
+# macOS / Linux / Windows
+.DS_Store           
+Thumbs.db           
+
+# Arquivos de travamento do .NET
+project.lock.json   
