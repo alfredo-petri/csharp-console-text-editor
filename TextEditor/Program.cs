@@ -4,13 +4,26 @@
     {
         static void Main(string[] args)
         {
-           Menu();
+            Menu();
         }
 
         static void Menu()
         {
             Console.Clear();
 
+            short option = MenuOptions();
+
+            switch (option)
+            {
+                case 0: Environment.Exit(0); break;
+                case 1: Open(); break;
+                case 2: Edit(); break;
+                default: Console.WriteLine("chama o menu novamente"); break;
+            }
+        }
+
+        static short MenuOptions()
+        {
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine("");
             Console.WriteLine("0 - Sair da aplicação");
@@ -21,13 +34,17 @@
 
             short option = short.Parse(Console.ReadLine());
 
-            switch (option)
-            {
-                case 0: Console.WriteLine("saiu da aplicação"); break;
-                case 1: Console.WriteLine("abre um arquivo"); break;
-                case 2: Console.WriteLine("cria um arquivo"); break;
-                default: Console.WriteLine("chama o menu novamente"); break;
-            }
+            return option;
+        }
+
+        static void Open()
+        {
+            Console.WriteLine("abre um arquivo");
+        }
+
+        static void Edit()
+        {
+            Console.WriteLine("cria um arquivo");
         }
     }
 }
