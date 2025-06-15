@@ -86,10 +86,29 @@
 
             while (Console.ReadKey().Key != ConsoleKey.Escape);
 
-            Console.WriteLine(text);
+            Save(text);
         }
 
-        
+        static void Save(string text)
+        {
+            Console.Clear();
+            Console.WriteLine("Qual é o caminho para salvar o arquivo?");
+            var path = Console.ReadLine();
+
+            using (var file = new StreamWriter(path))
+            {
+                file.Write(text);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Arquivo salvo com sucesso.");
+            Console.WriteLine();
+
+            Thread.Sleep(1000);
+
+            Menu();
+
+        }
 
     }
 }
