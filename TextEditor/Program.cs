@@ -60,6 +60,11 @@
 
             return option;
         }
+        static void DefaultOption()
+        {
+            Console.Clear();
+            Console.WriteLine("Opção inválida!");
+        }
 
         static void Open()
         {
@@ -68,13 +73,23 @@
 
         static void Edit()
         {
-            Console.WriteLine("cria um arquivo");
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo (pressione ESC a qualquer momento para sair do modo edição...)");
+            Console.WriteLine("");
+            string text = "";
+
+            do
+            {
+                text += Console.ReadLine();
+                text += Environment.NewLine;
+            }
+
+            while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+            Console.WriteLine(text);
         }
 
-        static void DefaultOption()
-        {
-            Console.Clear();
-            Console.WriteLine("Opção inválida!");
-        }
+        
+
     }
 }
