@@ -46,8 +46,8 @@
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine("");
             Console.WriteLine("0 - Sair da aplicação");
-            Console.WriteLine("1 - Abrir um arquivo");
-            Console.WriteLine("2 - Criar um arquivo");
+            Console.WriteLine("1 - Abrir um arquivo já existente");
+            Console.WriteLine("2 - Criar um novo arquivo");
             Console.WriteLine("");
             Console.Write("Selecione a opção desejada: ");
 
